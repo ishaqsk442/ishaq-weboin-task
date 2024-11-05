@@ -12,7 +12,7 @@ function ImageGallery() {
   return (
     <div className="placements-div" style={{ textAlign: 'center', padding: '2rem' }}>
       <h2>Our Placement Partners</h2>
-      {/* Replace src values with real image paths */}
+      
       <div className='clients-div' >
         <img src={airbnb} alt="Course 1" />
         <img src={grabuo} alt="Course 2" />

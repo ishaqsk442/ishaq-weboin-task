@@ -1,4 +1,4 @@
-// IntroSection.js
+
 import React from 'react';
 import './index.css'
 

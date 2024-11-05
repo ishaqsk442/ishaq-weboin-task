@@ -2,3 +2,65 @@
     background-color: black;
     color: white;
 }
+.insights-div-top-cont{
+    text-align: center;
+}
+.insights-div-top-cont h1{
+    font-size: 36px;
+    line-height:2.5rem;
+}
+.insights-div-top-cont p{
+    font-size: 14px;
+    color: rgb(102, 241, 241);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.insights-div-bottom-cont{
+    display: flex;
+
+}
+@media (max-width:1024px) {
+    .insights-div-bottom-cont{
+        display: flex;
+        flex-direction: column;
+    }
+    .insights-div-bottom-cont-img{
+    
+        width: 100%;
+        max-width: 950px;
+        height: 550px;
+        
+        
+    }
+    
+
+}
+.insights-div-bottom-cont-left-div{
+    width: 100%;
+    
+}
+.insights-div-bottom-cont-img{
+    
+    width: 100%;
+    max-width: 600px;
+    height:auto;
+    max-height: 400px;
+    
+    
+}
+.data-cont{
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    gap: 20px;
+    padding: 0px;
+}
+.data-cont h2{
+    margin: 0px;
+}
+
+.data-cont img{
+    height: 36px;
+    width: 36px;
+}

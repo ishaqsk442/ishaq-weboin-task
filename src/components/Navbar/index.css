@@ -1,5 +1,5 @@
 .nav{
-    background-color: rgba(0, 0, 0, 0.8);; 
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -8,11 +8,13 @@
     max-width: 768px;
     margin-left: auto;
     margin-right: auto;
-    
-    position: fixed;
-    top: 10px;
+    position: fixed; /* Keeps the navbar fixed at the top */
+    top: 10px; /* Positions the navbar at the very top */
+    left: 50%; /* Aligns the navbar horizontally to the center */
+    transform: translateX(-50%); /* Adjusts the navbar to be centered */
     border-radius: 20px;
     border: 1px solid white;
+    z-index: 1000; /* Ensures the navbar stays above other content */
 }
 p{
     margin: 0px;
