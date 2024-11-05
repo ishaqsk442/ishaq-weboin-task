@@ -27,9 +27,11 @@
 .stats-count-div{
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
-h3{
+.stats-count-div h3{
+    text-align: center;
     background-color: rgb(201 253 2);
     color: black;
     padding: 5px;
