@@ -1,0 +1,29 @@
+.placements-div{
+    background-image: linear-gradient(to bottom,  rgb(24, 18, 12),black);
+    
+}
+.placements-div h2{
+    color: white;
+    font: 36px;
+}
+.clients-div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+
+}
+.clients-div img{
+    height: 108px;
+    width: 180px;
+}
+.placements-div button{
+    background-color: rgb(247, 190, 6);
+    color: black;
+    padding: 16px 32px;
+    font-size: 16px;
+    border-radius: 25px;
+    margin-top: 10px;
+    border: none;
+}

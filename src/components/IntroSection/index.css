@@ -1,0 +1,28 @@
+.intro-div{
+    background-image: url("../../Assets/BackgroundHero.svg");
+    background-size: cover;
+    height: 500px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 60px;
+}
+.intro-div p{
+    font-size: 20px;
+    color: gray;
+}
+.intro-div button{
+    background-color: rgb(247, 190, 6);
+    color: black;
+    font-weight: bold;
+    padding: 16px 32px;
+    font-size: 16px;
+    border-radius: 25px;
+    margin-top: 10px;
+    border: none;
+}
