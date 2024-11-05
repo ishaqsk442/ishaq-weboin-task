@@ -1,70 +1,108 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Published Link : https://ishaq-weboin-task.netlify.app/
 
-## Available Scripts
 
-In the project directory, you can run:
+# Student Management Application
 
-### `npm start`
+A React application to manage students' placements, allowing dynamic addition, removal, and status tracking of students. The app uses Context API for state management, local storage for data persistence, and React Router for navigation.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The Student Management Application allows users to add, remove, and track the placement status of students. It provides real-time stats and saves data in `student context` to maintain state across sessions.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- Add, remove, and update student information.
+- Track placement status (`placed` or `unplaced`) with real-time updates.
+- Persistent data storage using `UseContext`.
+- Responsive design for different screen sizes.
+- Context API for efficient state management.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `App.js`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Description**: Root component, sets up routing and includes `Navbar`.
+- **Functionality**: Wraps the application with `StudentProvider` and defines routes for navigation.
 
-## Learn More
+### `Navbar.js`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Description**: Navigation bar for the app.
+- **Functionality**: Provides links to the Home and Form pages.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `HomePage.js`
 
-### Code Splitting
+- **Description**: Displays the main dashboard with student stats and list.
+- **Functionality**: Fetches and displays total, placed, and unplaced student counts and lists all students.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `FormPage.js`
 
-### Analyzing the Bundle Size
+- **Description**: Page with a form to add new students.
+- **Functionality**: Uses `StudentForm` component to collect student information and add it to the `StudentContext`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### `StatsSection.js`
 
-### Making a Progressive Web App
+- **Description**: Displays real-time stats on students.
+- **Functionality**: Fetches stats from `StudentContext` to show total students, placed, and unplaced counts.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### `StudentForm.js`
 
-### Advanced Configuration
+- **Description**: Form component for adding new students.
+- **Functionality**: Gathers student data and updates the context. Fields include:
+  - **Name**: Name of the student.
+  - **Status**: Dropdown to select either `placed` or `unplaced`.
+  - **Submit Button**: Adds the student to the list when clicked.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### `StudentList.js`
 
-### Deployment
+- **Description**: Lists all students currently stored in the context.
+- **Functionality**: Fetches and displays students from the context. Includes an option to remove a student.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Context
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### `StudentContext.js`
+
+- **Description**: Context file for managing the global state of students.
+- **Exports**:
+  - **`useStudents`**: Custom hook for accessing student-related state and actions.
+- **State Variables**:
+  - **`students`**: Array of student objects, each containing:
+    - `id`
+    - `name`
+    - `status`
+  - **`stats`**: Object containing:
+    - `total`: Total number of students.
+    - `placed`: Number of students marked as placed.
+    - `unplaced`: Number of students not placed.
+- **Functions**:
+  - **`addStudent`**: Adds a new student to the list and updates `localStorage`.
+  - **`removeStudent`**: Removes a student by `id`.
+- **Persistence**: Saves students to `localStorage` and loads them on initialization.
+
+---
+
+## Usage
+
+1. **Home Page**:
+   - View statistics of total students, placed, and unplaced counts.
+   - See the complete list of students.
+   - Remove a student by clicking on the delete icon next to their name.
+
+2. **Form Page**:
+   - Fill out the form to add a new student.
+   - Select the placement status for each student.
+   - Submit the form to add the student to the context and update the statistics.
+
+---
