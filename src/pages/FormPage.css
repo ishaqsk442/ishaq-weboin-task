@@ -1,0 +1,129 @@
+/* FormPage styles */
+
+.form-page {
+    padding: 2rem;
+    color: #fff;
+    background-color: #1a1a1a;
+  }
+  
+  .form-title,
+  .students-title {
+    text-align: center;
+    color: #d4ff00;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    flex: 1 1 100%;
+  }
+  
+  .form-group label {
+    color: #d4ff00;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  /* Submit button styling */
+  .submit-button {
+    align-self: flex-end;
+    margin-left: auto;
+    padding: 0.7rem;
+    background-color: #1a1a1a;
+    color: white;
+    border: 2px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  /* Student card styling */
+  .students-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .student-card {
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .student-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .student-avatar {
+    background-color: #d4ff00;
+    color: #1a1a1a;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .student-name {
+    margin: 0;
+    font-size: 1.2rem;
+    color: black;
+  }
+  
+  .student-card p {
+    color: black;
+  }
+  
+  .student-card strong {
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Delete button styling */
+  .delete-button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  /* Responsive styles */
+  @media (min-width: 1024px) {
+    .form-group {
+      flex: 1 1 48%; /* 2 columns per row */
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .form-group {
+      flex: 1 1 100%; /* 1 column per row */
+    }
+  }
+  
